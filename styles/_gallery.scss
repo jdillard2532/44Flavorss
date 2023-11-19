@@ -37,19 +37,26 @@
     h1 {
       font-family: var(--ff-secondary);
       font-size: 3rem;
-      text-align: center;
+      text-align: start;
     }
     .gallery_image {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
       gap: 1rem;
       padding: 5.5rem 0;
-      img {
-        width: 100%;
-        max-width: 25rem;
-        max-height: 26.56rem;
-        &:hover {
-          cursor: pointer;
+      .gallery_item {
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          max-width: 25rem;
+          max-height: 26.56rem;
+          transition: 0.4s;
+          &:hover {
+            cursor: pointer;
+            transition: ease-out 0.4s;
+            transform: scale(1.1);
+          }
         }
       }
     }
