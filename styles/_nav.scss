@@ -57,7 +57,7 @@ nav {
           .hamburger {
             display: none;
             cursor: pointer;
-            position: fixed;
+            position: absolute;
             z-index: 999;
             &active {
               top: 0.8rem;

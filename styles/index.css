@@ -196,7 +196,7 @@ nav .img_wrapper .overlay .wrapper .navSection .nav_menu li {
 nav .img_wrapper .overlay .wrapper .navSection .hamburger {
   display: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   z-index: 999;
 }
 nav .img_wrapper .overlay .wrapper .navSection .hamburgeractive {
@@ -672,6 +672,9 @@ main .aboutUsSection button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.invite_section h1 {
+  font-family: var(--ff-secondary);
+}
 .invite_section h2 {
   color: white;
 }
@@ -728,7 +731,7 @@ footer .wrapper ul {
   text-decoration: none;
   gap: 1.5rem;
   font-size: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 footer .wrapper ul a {
   text-decoration: none;
@@ -749,9 +752,6 @@ footer .wrapper .socials .fa-brands {
 footer .wrapper .socials .fa-brands:hover {
   color: var(--primaryColor);
   cursor: pointer;
-}
-footer .wrapper .email_content {
-  margin-top: 1rem;
 }
 footer .wrapper .email_content .email {
   display: flex;
