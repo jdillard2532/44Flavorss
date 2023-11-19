@@ -67,11 +67,18 @@ p {
   display: inline-block;
   border-bottom: 1px solid var(--primaryColor);
   width: 40%;
-  margin: 0 2.3rem;
+  margin: 0 1.5rem;
 }
 
 .p-color {
   color: var(--primaryColor);
   text-transform: uppercase;
   font-style: italic;
+}
+
+//768px
+@media (max-width: 48em) {
+  .logoLine {
+    // margin: 0 1.3rem;
+  }
 }

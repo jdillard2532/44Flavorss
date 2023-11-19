@@ -88,57 +88,6 @@ main {
       max-width: 200px;
     }
   }
-
-  .main_content_2 {
-    margin-top: 3rem;
-    .wrapper {
-      gap: 4rem;
-      padding-bottom: 6rem;
-      .main_image_2 {
-        border-radius: 10px;
-      }
-      .main_Content {
-        gap: 1rem;
-      }
-    }
-  }
-
-  .main_content_3 {
-    background-color: black;
-    background-image: url("https://images.unsplash.com/photo-1547573854-74d2a71d0826?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    h2 {
-      color: white;
-    }
-    .overlay {
-      background-color: hsl(0, 0%, 0%, 0.8);
-      min-height: 500px;
-      display: flex;
-      align-items: center;
-
-      .wrapper {
-        display: flex;
-        justify-content: center;
-        .content {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          max-width: 1000px;
-          align-items: center;
-          gap: 3rem;
-        }
-        button {
-          max-width: 200px;
-          margin: 0;
-        }
-      }
-    }
-  }
 }
 
 //768px

@@ -126,7 +126,7 @@ p {
   display: inline-block;
   border-bottom: 1px solid var(--primaryColor);
   width: 40%;
-  margin: 0 2.3rem;
+  margin: 0 1.5rem;
 }
 
 .p-color {
@@ -228,7 +228,7 @@ nav .img_wrapper .overlay .wrapper .hero_content {
   margin-inline: auto;
   text-align: center;
   gap: 3rem;
-  height: 100%;
+  height: 90%;
 }
 nav .img_wrapper .overlay .wrapper .hero_content h2 {
   padding: 0 2rem;
@@ -368,54 +368,6 @@ main .aboutUsSection h2 {
 }
 main .aboutUsSection button {
   max-width: 200px;
-}
-main .main_content_2 {
-  margin-top: 3rem;
-}
-main .main_content_2 .wrapper {
-  gap: 4rem;
-  padding-bottom: 6rem;
-}
-main .main_content_2 .wrapper .main_image_2 {
-  border-radius: 10px;
-}
-main .main_content_2 .wrapper .main_Content {
-  gap: 1rem;
-}
-main .main_content_3 {
-  background-color: black;
-  background-image: url("https://images.unsplash.com/photo-1547573854-74d2a71d0826?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-main .main_content_3 h2 {
-  color: white;
-}
-main .main_content_3 .overlay {
-  background-color: hsla(0, 0%, 0%, 0.8);
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-}
-main .main_content_3 .overlay .wrapper {
-  display: flex;
-  justify-content: center;
-}
-main .main_content_3 .overlay .wrapper .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  max-width: 1000px;
-  align-items: center;
-  gap: 3rem;
-}
-main .main_content_3 .overlay .wrapper button {
-  max-width: 200px;
-  margin: 0;
 }
 
 @media (max-width: 62.5em) {
@@ -675,6 +627,7 @@ main .main_content_3 .overlay .wrapper button {
   font-family: var(--ff-secondary);
   color: #000;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .testimonial_section .content {
   display: grid;
@@ -710,6 +663,43 @@ main .main_content_3 .overlay .wrapper button {
   margin-bottom: 1.5rem;
 }
 
+.invite_section {
+  background-color: black;
+  background-image: url("https://images.unsplash.com/photo-1547573854-74d2a71d0826?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.invite_section h2 {
+  color: white;
+}
+.invite_section .overlay {
+  background-color: hsla(0, 0%, 0%, 0.8);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+.invite_section .overlay .wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1rem;
+}
+.invite_section .overlay .wrapper .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 1000px;
+  align-items: center;
+  gap: 3rem;
+}
+.invite_section .overlay .wrapper button {
+  max-width: 200px;
+  margin: 0;
+}
+
 footer {
   background-color: #000;
   padding: 10rem 0 2rem 0;
@@ -720,6 +710,7 @@ footer .wrapper {
   justify-content: center;
   text-align: center;
   gap: 1.5rem;
+  padding: 0 1rem;
 }
 footer .wrapper h2:hover {
   cursor: pointer;
@@ -736,8 +727,8 @@ footer .wrapper ul {
   list-style: none;
   text-decoration: none;
   gap: 1.5rem;
-  font-size: 20px;
-  margin-top: 2rem;
+  font-size: 1rem;
+  margin: 2rem 0;
 }
 footer .wrapper ul a {
   text-decoration: none;
@@ -759,7 +750,10 @@ footer .wrapper .socials .fa-brands:hover {
   color: var(--primaryColor);
   cursor: pointer;
 }
-footer .wrapper .email {
+footer .wrapper .email_content {
+  margin-top: 1rem;
+}
+footer .wrapper .email_content .email {
   display: flex;
   text-decoration: none;
   justify-content: space-between;
@@ -768,10 +762,17 @@ footer .wrapper .email {
   max-width: 12.5rem;
   margin-inline: auto;
   text-align: center;
+  align-items: center;
 }
-footer .wrapper .email:hover {
+footer .wrapper .email_content .email:hover {
   color: var(--primaryColor);
 }
-footer .wrapper .fa-regular {
+footer .wrapper .email_content .fa-regular {
   font-size: 1.5rem;
+}
+
+@media (max-width: 48em) {
+  footer {
+    padding: 5rem 0;
+  }
 }/*# sourceMappingURL=index.css.map */
