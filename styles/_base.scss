@@ -1,0 +1,77 @@
+:root {
+  font-size: 16px;
+  // --primaryColor: hsl(205, 81%, 74%);
+  --primaryColor: hsl(32, 45%, 76%);
+  --accentColor: hsl(31, 65%, 65%);
+  --secondaryColor: hsl(33, 59%, 90%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Kaushan Script", cursive;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 0.12rem;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.6875rem;
+  font-size: clamp(
+    2.6875rem,
+    2.159330985915493rem + 2.253521126760563vw,
+    4.1875rem
+  );
+}
+
+h2 {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.7359154929577465rem + 1.1267605633802815vw, 1.75rem);
+  line-height: 1.7;
+  letter-spacing: 0.2rem;
+}
+
+p {
+  line-height: 2;
+  letter-spacing: 0.2rem;
+}
+
+.contactButton {
+  padding: 0.5rem;
+  border: 3px solid var(--primaryColor);
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    background-color: var(--primaryColor);
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.logo {
+  font-family: "Kaushan Script", cursive;
+  color: var(--primaryColor);
+  font-size: 2rem;
+  letter-spacing: 0.25rem;
+}
+
+.logoLine {
+  display: inline-block;
+  border-bottom: 1px solid var(--primaryColor);
+  width: 40%;
+  margin: 0 2.3rem;
+}
+
+.p-color {
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  font-style: italic;
+}

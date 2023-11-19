@@ -1,0 +1,179 @@
+nav {
+  position: relative;
+
+  .img_wrapper {
+    position: relative;
+
+    img {
+      max-height: 100vh;
+      width: 100%;
+      object-fit: cover;
+      min-height: 800px;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+
+      .wrapper {
+        max-width: 1440px;
+        margin-inline: auto;
+        padding: 1rem 1rem;
+        height: 100%;
+        .navSection {
+          display: flex;
+          justify-content: space-around;
+          padding: 1.5rem 2rem;
+          .logo {
+            margin-right: auto;
+          }
+          a {
+            text-decoration: none;
+          }
+
+          .nav_menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            &.active {
+              left: 0;
+            }
+            a {
+              color: #fff;
+              transition: 0.3s ease-in-out;
+              &:hover {
+                border-bottom: 0.2rem solid var(--primaryColor);
+                color: var(--primaryColor);
+              }
+            }
+            li {
+              padding: 0.5rem;
+              border-radius: 10px;
+            }
+          }
+          .hamburger {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            z-index: 999;
+            &active {
+              top: 0.8rem;
+            }
+
+            &.active .bar:nth-child(2) {
+              opacity: 0;
+            }
+
+            &.active .bar:nth-child(1) {
+              transform: translateY(0.5rem) rotate(45deg);
+            }
+
+            &.active .bar:nth-child(3) {
+              transform: translateY(-1.06rem) rotate(-45deg);
+            }
+          }
+
+          .bar {
+            display: block;
+            width: 2.2rem;
+            height: 0.3rem;
+            margin: 0.5rem auto;
+            -webkit-transition: all 0.03s ease-in-out;
+            transition: all 0.03s ease-in-out;
+            background-color: #e0a96d;
+          }
+        }
+
+        .hero_content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          max-width: 1000px;
+          margin-inline: auto;
+          text-align: center;
+          gap: 3rem;
+          height: 100%;
+          h2 {
+            padding: 0 2rem;
+          }
+        }
+        .contact_btn {
+          display: flex;
+          gap: 5rem;
+          font-size: 1.13rem;
+          button:first-of-type {
+            background-color: var(--primaryColor);
+            color: #000;
+            &:hover {
+              background-color: transparent;
+              color: #fff;
+              border: 0.188rem solid var(--primaryColor);
+            }
+          }
+        }
+      }
+      .fa-bars {
+        font-size: 2.5rem;
+        color: var(--primaryColor);
+      }
+      .fa-xmark {
+        display: none;
+      }
+    }
+  }
+}
+
+//768px
+@media (max-width: 48em) {
+  nav {
+    .img_wrapper {
+      .overlay {
+        .wrapper {
+          .navSection {
+            .hamburger {
+              display: block;
+              right: 2.5rem;
+            }
+            .nav_menu {
+              position: fixed;
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              left: -100%;
+              // top: 6rem;
+              top: 0;
+              flex-direction: column;
+              background-color: var(--primaryColor);
+              width: 100%;
+              max-width: 48em;
+              transition: 0.3s;
+              padding-top: 2rem;
+              margin-left: 0;
+
+              .navLink {
+                width: 100%;
+                background-color: #ddc3a5;
+                padding: 1rem;
+
+                &:hover {
+                  border-bottom: none;
+                  background-color: #f5e8d8;
+                  color: black;
+                  transition: 1.2s;
+                }
+              }
+
+              // .navMenu.active {
+              //   left: 0;
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.our_menu_section {
+  background-color: #000;
+  .wrapper {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    h1 {
+      text-align: center;
+      font-family: "Kaushan Script", cursive;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    span {
+      color: var(--accentColor);
+    }
+    .menuItemSection {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2.5rem;
+      .menu_pictures {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        .menu_picture_1 {
+          grid-column: span 2;
+          grid-row: 1;
+        }
+        .menu_picture_2,
+        .menu_picture_3 {
+          height: 100%;
+          grid-row: 2;
+        }
+      }
+      .menu_list {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: stretch;
+        height: 100%;
+        img {
+          max-width: 6.25rem;
+          max-height: 8.56rem;
+          width: 100%;
+        }
+        .menu_list_item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          justify-content: space-between;
+          padding-top: 0.5rem;
+        }
+      }
+    }
+  }
+  button {
+    max-width: 12.5rem;
+    display: block;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+//media query 1000px
+@media (max-width: 62.5em) {
+  .our_menu_section {
+    .wrapper {
+      .menuItemSection {
+        .menu_pictures {
+          display: none;
+        }
+      }
+    }
+  }
+}
