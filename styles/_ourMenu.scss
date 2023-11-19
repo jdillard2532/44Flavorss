@@ -1,7 +1,7 @@
 .our_menu_section {
   background-color: #000;
   .wrapper {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
     margin: 0 auto;
     h1 {
       text-align: center;
@@ -40,6 +40,7 @@
         grid-template-columns: 1fr;
         align-items: stretch;
         height: 100%;
+        gap: 1rem;
         img {
           max-width: 6.25rem;
           max-height: 8.56rem;

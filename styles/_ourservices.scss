@@ -75,8 +75,16 @@
 }
 
 @media (max-width: 48em) {
-  .services_card_content {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .ourServices {
+    .services_card_content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding-top: 5rem;
+      div:first-of-type {
+        p {
+          line-height: 1;
+        }
+      }
+    }
   }
 }

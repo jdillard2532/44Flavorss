@@ -146,6 +146,8 @@ main {
   main {
     .aboutUsSection {
       gap: 1rem;
+      padding-top: 0;
+      padding-bottom: 7rem;
 
       .aboutusContent {
         grid-column: 1/-1;
