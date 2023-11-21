@@ -77,6 +77,9 @@ p {
   text-transform: uppercase;
   font-style: italic;
 }
+.accent-color {
+  color: var(--accentColor);
+}
 
 .modal {
   width: 100%;
@@ -101,12 +104,32 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 20px;
+  margin: 1.25rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   &:hover {
     color: rgb(255, 255, 255);
   }
+}
+.nextBtn,
+.prevBtn {
+  color: var(--accentColor);
+  font-size: 2.5rem;
+  position: absolute;
+  margin: 1.25rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 1rem;
+  &:hover {
+    color: rgb(255, 255, 255);
+    background-color: var(--primaryColor);
+  }
+}
+.nextBtn {
+  right: 3%;
+}
+.prevBtn {
+  left: 3%;
 }
 
 @keyframes zoom {

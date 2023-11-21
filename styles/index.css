@@ -137,6 +137,10 @@ p {
   font-style: italic;
 }
 
+.accent-color {
+  color: var(--accentColor);
+}
+
 .modal {
   width: 100%;
   height: 100%;
@@ -162,12 +166,36 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 20px;
+  margin: 1.25rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
 .closeBtn:hover {
   color: rgb(255, 255, 255);
+}
+
+.nextBtn,
+.prevBtn {
+  color: var(--accentColor);
+  font-size: 2.5rem;
+  position: absolute;
+  margin: 1.25rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  padding: 1rem;
+}
+.nextBtn:hover,
+.prevBtn:hover {
+  color: rgb(255, 255, 255);
+  background-color: var(--primaryColor);
+}
+
+.nextBtn {
+  right: 3%;
+}
+
+.prevBtn {
+  left: 3%;
 }
 
 @keyframes zoom {
@@ -659,11 +687,16 @@ main .aboutUsSection button {
   }
 }
 .gallery_page .header_content,
-.gallery_page img {
-  max-height: 50vh;
+.gallery_page img,
+.aboutUs_page .header_content,
+.aboutUs_page img {
+  max-height: 60vh;
 }
-.gallery_page h1 {
+.gallery_page h1,
+.aboutUs_page h1 {
   font-family: var(--ff-secondary);
+  font-size: 4rem;
+  font-size: clamp(4rem, 2.9436619718rem + 4.5070422535vw, 7rem);
 }
 
 .gallery_main {
@@ -685,6 +718,7 @@ main .aboutUsSection button {
   height: 100%;
   max-height: 400px;
   transition: 0.3s ease-in-out;
+  border-radius: 10px;
 }
 .gallery_grid img:hover {
   cursor: pointer;
@@ -785,6 +819,73 @@ main .aboutUsSection button {
   margin: 0;
 }
 
+.aboutUs_main {
+  background-color: var(--secondaryColor);
+}
+.aboutUs_main .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  color: #000;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.aboutUs_main .aboutUs_image {
+  display: flex;
+  justify-self: end;
+  padding: 2rem;
+}
+.aboutUs_main .aboutUs_image img {
+  max-height: 40rem;
+  border-radius: 10px;
+}
+.aboutUs_main .aboutUs_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.aboutUs_main .aboutUs_content h2,
+.aboutUs_main .aboutUs_content h3 {
+  font-family: var(--ff-secondary);
+}
+.aboutUs_main h2 {
+  font-size: 2.2rem;
+  font-size: clamp(2.2rem, 1.9183098592rem + 1.2018779343vw, 3rem);
+}
+.aboutUs_main h3 {
+  font-size: 1.5rem;
+}
+.aboutUs_main .underline {
+  position: relative;
+}
+.aboutUs_main .underline::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 5rem;
+  color: var(--accentColor);
+  background-color: var(--accentColor);
+  height: 3px;
+  top: -1rem;
+}
+.aboutUs_main p {
+  max-width: 35.25rem;
+}
+.aboutUs_main .quote {
+  font-weight: 900;
+  font-style: italic;
+}
+
+@media (max-width: 57.19em) {
+  .aboutUs_main .aboutUs_image {
+    justify-self: center;
+  }
+  .aboutUs_main .aboutUs_content {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
 footer {
   background-color: #000;
   padding: 10rem 0 2rem 0;
