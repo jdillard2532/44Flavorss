@@ -691,6 +691,14 @@ main .aboutUsSection button {
   transform: scale(1.1);
 }
 
+@media (max-width: 48em) {
+  .gallery_main {
+    padding: 5rem 0 0 0;
+  }
+  .gallery_grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
 .testimonial_section {
   background-color: var(--secondaryColor);
 }
