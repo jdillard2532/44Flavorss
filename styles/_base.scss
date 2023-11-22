@@ -143,4 +143,8 @@ p {
 
 //768px
 @media (max-width: 48em) {
+  .nextBtn,
+  .prevBtn {
+    font-size: 1.5rem;
+  }
 }

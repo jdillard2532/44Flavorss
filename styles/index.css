@@ -206,6 +206,12 @@ p {
     transform: scale(1);
   }
 }
+@media (max-width: 48em) {
+  .nextBtn,
+  .prevBtn {
+    font-size: 1.5rem;
+  }
+}
 nav {
   position: absolute;
   width: 100%;
@@ -331,7 +337,6 @@ header .contact_btn button:first-of-type:hover {
     position: fixed;
     display: flex;
     text-align: center;
-    justify-content: center;
     left: -100%;
     flex-direction: column;
     background-color: var(--primaryColor);
@@ -340,6 +345,7 @@ header .contact_btn button:first-of-type:hover {
     top: 0;
     transition: 0.3s;
     margin-left: 0;
+    height: 100%;
   }
   nav .nav_menu .nav_menu_links {
     flex-direction: column;
@@ -480,9 +486,6 @@ main .aboutUsSection button {
 .ourServices .services_card_content div:first-of-type p {
   font-size: 2rem;
 }
-.ourServices .services_card_content div:last-of-type {
-  padding: 1rem;
-}
 .ourServices .services_card_content .contactButton {
   color: #000;
 }
@@ -533,7 +536,11 @@ main .aboutUsSection button {
   .ourServices .services_card_content {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-top: 5rem;
+    padding: 5rem 0 0 0;
+    gap: 2rem;
+  }
+  .ourServices .services_card_content div:first-of-type {
+    gap: 2rem;
   }
   .ourServices .services_card_content div:first-of-type p {
     line-height: 1;
@@ -671,6 +678,13 @@ main .aboutUsSection button {
   transition: ease-out 0.4s;
   transform: scale(1.1);
 }
+.gallery_section .wrapper .contactButton:hover {
+  color: #000;
+}
+.gallery_section .wrapper .contactButton a {
+  color: white;
+  text-decoration: none;
+}
 
 @media (max-width: 56.88em) {
   .gallery_section .wrapper .gallery_list {
@@ -730,7 +744,9 @@ main .aboutUsSection button {
     padding: 5rem 0 0 0;
   }
   .gallery_grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 1.2rem;
   }
 }
 .testimonial_section {
@@ -876,8 +892,18 @@ main .aboutUsSection button {
   font-weight: 900;
   font-style: italic;
 }
+.aboutUs_main .services {
+  color: #000;
+}
+.aboutUs_main .services .service_card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
 @media (max-width: 57.19em) {
+  .aboutUs_main {
+    padding-top: 3rem;
+  }
   .aboutUs_main .aboutUs_image {
     justify-self: center;
   }

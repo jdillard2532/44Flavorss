@@ -60,6 +60,15 @@
         }
       }
     }
+    .contactButton {
+      &:hover {
+        color: #000;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 }
 

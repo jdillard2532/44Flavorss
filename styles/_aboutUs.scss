@@ -54,11 +54,19 @@
     font-weight: 900;
     font-style: italic;
   }
+  .services {
+    color: #000;
+    .service_card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
 }
 
 // 915px
 @media (max-width: 57.19em) {
   .aboutUs_main {
+    padding-top: 3rem;
     .aboutUs_image {
       justify-self: center;
     }

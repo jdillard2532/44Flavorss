@@ -130,7 +130,6 @@ header {
       position: fixed;
       display: flex;
       text-align: center;
-      justify-content: center;
       left: -100%;
       flex-direction: column;
       background-color: var(--primaryColor);
@@ -139,6 +138,7 @@ header {
       top: 0;
       transition: 0.3s;
       margin-left: 0;
+      height: 100%;
       .nav_menu_links {
         flex-direction: column;
       }
