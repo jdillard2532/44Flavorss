@@ -974,6 +974,69 @@ main .aboutUsSection button {
     margin: 2.5rem 0 0 0;
   }
 }
+.contact_page img {
+  max-height: 60vh;
+}
+.contact_page h1 {
+  font-family: var(--ff-secondary);
+  font-size: 4rem;
+  font-size: clamp(4rem, 2.9436619718rem + 4.5070422535vw, 7rem);
+}
+
+.contact_main {
+  background-color: #fff;
+  color: #000;
+}
+.contact_main .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+.contact_main .wrapper img {
+  padding: 3rem;
+}
+.contact_main form {
+  max-width: 600px;
+  padding: 1rem;
+}
+.contact_main form .underline {
+  position: relative;
+}
+.contact_main form .underline::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 5rem;
+  color: var(--accentColor);
+  background-color: var(--accentColor);
+  height: 3px;
+  top: 0rem;
+}
+.contact_main form h1 {
+  font-family: var(--ff-secondary);
+  margin: 1rem 0;
+}
+.contact_main form p:first-of-type {
+  font-size: 1.5rem;
+}
+.contact_main form ul li {
+  display: flex;
+  margin: 1rem 0;
+  align-items: center;
+}
+.contact_main form ul input,
+.contact_main form ul textarea {
+  width: 100%;
+  padding: 1rem;
+}
+.contact_main form ul textarea {
+  height: 9.38rem;
+}
+.contact_main form ul label {
+  width: 30%;
+}
+
 footer {
   background-color: #000;
   padding: 10rem 0 2rem 0;
