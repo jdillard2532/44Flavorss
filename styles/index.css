@@ -836,9 +836,14 @@ main .aboutUsSection button {
 }
 
 .aboutUs_main {
-  background-color: var(--secondaryColor);
+  padding-top: 0;
 }
-.aboutUs_main .content {
+
+.aboutUs_main_section {
+  background-color: var(--secondaryColor);
+  padding-top: 0;
+}
+.aboutUs_main_section .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   color: #000;
@@ -846,36 +851,36 @@ main .aboutUsSection button {
   justify-items: center;
   align-items: center;
 }
-.aboutUs_main .aboutUs_image {
+.aboutUs_main_section .aboutUs_image {
   display: flex;
   justify-self: end;
   padding: 2rem;
 }
-.aboutUs_main .aboutUs_image img {
+.aboutUs_main_section .aboutUs_image img {
   max-height: 40rem;
   border-radius: 10px;
 }
-.aboutUs_main .aboutUs_content {
+.aboutUs_main_section .aboutUs_content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
 }
-.aboutUs_main .aboutUs_content h2,
-.aboutUs_main .aboutUs_content h3 {
+.aboutUs_main_section .aboutUs_content h2,
+.aboutUs_main_section .aboutUs_content h3 {
   font-family: var(--ff-secondary);
 }
-.aboutUs_main h2 {
+.aboutUs_main_section h2 {
   font-size: 2.2rem;
   font-size: clamp(2.2rem, 1.9183098592rem + 1.2018779343vw, 3rem);
 }
-.aboutUs_main h3 {
+.aboutUs_main_section h3 {
   font-size: 1.5rem;
 }
-.aboutUs_main .underline {
+.aboutUs_main_section .underline {
   position: relative;
 }
-.aboutUs_main .underline::after {
+.aboutUs_main_section .underline::after {
   position: absolute;
   display: block;
   content: "";
@@ -885,19 +890,68 @@ main .aboutUsSection button {
   height: 3px;
   top: -1rem;
 }
-.aboutUs_main p {
+.aboutUs_main_section p {
   max-width: 35.25rem;
 }
-.aboutUs_main .quote {
+.aboutUs_main_section .quote {
   font-weight: 900;
   font-style: italic;
 }
-.aboutUs_main .services {
+
+.aboutUs_services {
+  background-color: #fff;
   color: #000;
 }
-.aboutUs_main .services .service_card {
+.aboutUs_services .service_header {
+  text-align: center;
+  margin: 5rem 0;
+}
+.aboutUs_services .service_header h1 {
+  font-family: var(--ff-secondary);
+  margin: 2rem 0;
+}
+.aboutUs_services .service_header h3 {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+.aboutUs_services .service_header .underline {
+  position: relative;
+}
+.aboutUs_services .service_header .underline::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 5rem;
+  color: var(--accentColor);
+  background-color: var(--accentColor);
+  height: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.aboutUs_services .services_card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.aboutUs_services .services_card .card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  text-align: center;
+  gap: 1.2rem;
+}
+.aboutUs_services .services_card .card .fa-regular,
+.aboutUs_services .services_card .card .fa-solid {
+  font-size: 4rem;
+  color: var(--accentColor);
+}
+.aboutUs_services .services_card .card .card_title {
+  font-size: 1.5rem;
+}
+.aboutUs_services .services_card .card .card_content {
+  color: #939393;
 }
 
 @media (max-width: 57.19em) {
@@ -910,6 +964,14 @@ main .aboutUsSection button {
   .aboutUs_main .aboutUs_content {
     gap: 1.5rem;
     padding: 2rem;
+  }
+}
+@media (max-width: 750px) {
+  .aboutUs_services .services_card .card {
+    padding: 1rem;
+  }
+  .aboutUs_services .service_header {
+    margin: 2.5rem 0 0 0;
   }
 }
 footer {

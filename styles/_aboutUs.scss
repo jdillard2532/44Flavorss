@@ -1,5 +1,10 @@
 .aboutUs_main {
+  padding-top: 0;
+}
+
+.aboutUs_main_section {
   background-color: var(--secondaryColor);
+  padding-top: 0;
   .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -54,11 +59,63 @@
     font-weight: 900;
     font-style: italic;
   }
-  .services {
-    color: #000;
-    .service_card {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.aboutUs_services {
+  background-color: #fff;
+  color: #000;
+  .service_header {
+    text-align: center;
+    margin: 5rem 0;
+
+    h1 {
+      font-family: var(--ff-secondary);
+      margin: 2rem 0;
+    }
+    h3 {
+      font-size: 1.5rem;
+      display: inline-block;
+    }
+    .underline {
+      position: relative;
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 5rem;
+        color: var(--accentColor);
+        background-color: var(--accentColor);
+        height: 3px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .services_card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      text-align: center;
+      gap: 1.2rem;
+
+      .fa-regular,
+      .fa-solid {
+        font-size: 4rem;
+        color: var(--accentColor);
+      }
+      .card_title {
+        font-size: 1.5rem;
+      }
+
+      .card_content {
+        color: #939393;
+      }
     }
   }
 }
@@ -73,6 +130,20 @@
     .aboutUs_content {
       gap: 1.5rem;
       padding: 2rem;
+    }
+  }
+}
+
+//750px
+@media (max-width: 750px) {
+  .aboutUs_services {
+    .services_card {
+      .card {
+        padding: 1rem;
+      }
+    }
+    .service_header {
+      margin: 2.5rem 0 0 0;
     }
   }
 }
