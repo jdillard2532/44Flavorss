@@ -24,10 +24,12 @@ nav {
       color: #fff;
       list-style: none;
       text-decoration: none;
+      transition: 0.2s;
 
       &:hover {
         border-bottom: 0.2rem solid var(--primaryColor);
         color: var(--primaryColor);
+        font-size: 1.1rem;
       }
     }
   }
@@ -96,6 +98,7 @@ header {
     display: flex;
     gap: 5rem;
     font-size: 1.13rem;
+
     button:first-of-type {
       background-color: var(--primaryColor);
       color: #000;
