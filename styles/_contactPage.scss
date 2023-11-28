@@ -14,16 +14,19 @@
   color: #000;
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-content: center;
     align-items: center;
+    padding-bottom: 3rem;
     img {
-      padding: 3rem;
+      padding: 1rem;
+      margin-inline: auto;
     }
   }
   form {
-    max-width: 600px;
+    max-width: 700px;
     padding: 1rem;
+    margin-inline: auto;
     .underline {
       position: relative;
       &::after {
@@ -47,6 +50,7 @@
     ul {
       li {
         display: flex;
+        flex-wrap: wrap;
         margin: 1rem 0;
         align-items: center;
       }
@@ -58,10 +62,23 @@
 
       textarea {
         height: 9.38rem;
+        resize: none;
       }
       label {
         width: 30%;
       }
     }
+    .contactButton {
+      background-color: var(--primaryColor);
+      width: 5rem;
+      margin-top: 0;
+      float: right;
+    }
+  }
+}
+
+//500px
+@media (max-width: 31.25em) {
+  .contact_main {
   }
 }
